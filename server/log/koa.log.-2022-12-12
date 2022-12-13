@@ -1,0 +1,188 @@
+[2022-12-12T09:24:55.268] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T09:24:55.425] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T09:24:59.521] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T09:25:04.342] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T09:25:48.283] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T09:25:51.090] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:23:10.751] [ERROR] [Default] - TypeError: Cannot destructure property 'username' of 'ctx.body' as it is undefined.
+    at register (C:\Users\user\Desktop\koa-react\server\controller\auth.ts:101:11)
+    at dispatch (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\lib\wrapper.ts:46:9
+    at Generator.next (<anonymous>)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\dist\wrapper.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\dist\wrapper.js:4:12)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\lib\wrapper.ts:31:5
+    at dispatch (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\@koa+router@10.1.1\node_modules\@koa\router\lib\router.js:372:16
+[2022-12-12T13:23:36.978] [ERROR] [Default] - TypeError: Cannot destructure property 'username' of 'ctx.body' as it is undefined.
+    at register (C:\Users\user\Desktop\koa-react\server\controller\auth.ts:102:11)
+    at dispatch (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\lib\wrapper.ts:46:9
+    at Generator.next (<anonymous>)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\dist\wrapper.js:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\dist\wrapper.js:4:12)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-swagger-decorator@1.8.6\node_modules\koa-swagger-decorator\lib\wrapper.ts:31:5
+    at dispatch (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\@koa+router@10.1.1\node_modules\@koa\router\lib\router.js:372:16
+[2022-12-12T13:34:53.052] [ERROR] [Default] - undefined
+[2022-12-12T13:55:49.356] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:55:49.535] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:55:52.122] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:55:52.975] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:57:58.824] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T13:58:17.156] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T14:01:11.092] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T14:07:11.476] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+[2022-12-12T14:10:11.994] [ERROR] [Default] - UnauthorizedError: Authentication Error
+    at Object.throw (C:\Users\user\node_modules\.pnpm\koa@2.13.4\node_modules\koa\lib\context.js:97:11)
+    at jwt (C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-jwt@4.0.3\node_modules\koa-jwt\lib\index.js:23:22)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-unless@1.0.7\node_modules\koa-unless\index.js:29:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at loggerMiddleware (C:\Users\user\Desktop\koa-react\server\middlewares\logger.ts:43:9)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (C:\Users\user\Desktop\koa-react\server\middlewares\response.ts:18:10)
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\user\Desktop\koa-react\node_modules\.pnpm\koa-body@6.0.1\node_modules\koa-body\src\index.ts:120:12
+    at dispatch (C:\Users\user\node_modules\.pnpm\koa-compose@4.1.0\node_modules\koa-compose\index.js:42:32)

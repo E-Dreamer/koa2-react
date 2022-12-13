@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext","es6"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true, //支持以import xx from ‘xx’格式引入 
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*":["./src/*"],
+      "@server/*":["./server/*"]
+    }
+  },
+  "include": ["src","vite.config.ts","server"],
+  // "references": [{ "path": "./tsconfig.node.json" }]
+}
