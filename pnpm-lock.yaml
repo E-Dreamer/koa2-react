@@ -1,13 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@koa/cors': ^4.0.0
   '@koa/router': ^12.0.0
   '@types/bcryptjs': ^2.4.2
   '@types/jsonwebtoken': ^8.5.9
   '@types/koa': ^2.13.5
   '@types/koa-bodyparser': ^4.3.10
-  '@types/koa-cors': ^0.0.2
   '@types/koa-session': ^5.10.6
+  '@types/koa__cors': ^3.3.0
   '@types/koa__router': ^12.0.0
   '@types/node': ^18.11.12
   '@types/react': ^18.0.24
@@ -17,7 +18,6 @@ specifiers:
   cross-env: ^7.0.3
   jsonwebtoken: ^8.5.1
   koa-body: ^6.0.1
-  koa-cors: ^0.0.16
   koa-jwt: ^4.0.3
   koa-session: ^6.2.0
   koa-swagger-decorator: ^1.8.6
@@ -33,12 +33,12 @@ specifiers:
   xss: ^1.0.14
 
 dependencies:
+  '@koa/cors': 4.0.0
   '@koa/router': 12.0.0
   bcryptjs: 2.4.3
   cross-env: 7.0.3
   jsonwebtoken: 8.5.1
   koa-body: 6.0.1
-  koa-cors: 0.0.16
   koa-jwt: 4.0.3
   koa-session: 6.2.0
   koa-swagger-decorator: 1.8.6
@@ -56,8 +56,8 @@ devDependencies:
   '@types/jsonwebtoken': 8.5.9
   '@types/koa': 2.13.5
   '@types/koa-bodyparser': 4.3.10
-  '@types/koa-cors': 0.0.2
   '@types/koa-session': 5.10.6
+  '@types/koa__cors': 3.3.0
   '@types/koa__router': 12.0.0
   '@types/node': 18.11.12
   '@types/react': 18.0.26
@@ -400,6 +400,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
+  /@koa/cors/4.0.0:
+    resolution: {integrity: sha512-Y4RrbvGTlAaa04DBoPBWJqDR5gPj32OOz827ULXfgB1F7piD1MB/zwn8JR2LAnvdILhxUbXbkXGWuNVsFuVFCQ==}
+    engines: {node: '>= 14.0.0'}
+    dependencies:
+      vary: 1.1.2
+    dev: false
+
   /@koa/router/10.1.1:
     resolution: {integrity: sha512-ORNjq5z4EmQPriKbR0ER3k4Gh7YGNhWDL7JBW+8wXDrHLbWYKYSJaOJ9aN06npF5tbTxe2JBOsurpJDAvjiXKw==}
     engines: {node: '>= 8.0.0'}
@@ -551,12 +558,6 @@ packages:
     dependencies:
       '@types/koa': 2.13.5
 
-  /@types/koa-cors/0.0.2:
-    resolution: {integrity: sha512-uNaDY26HUVO+2C6arK8ZFODs9mBjYprD8mlvkVe2bYdX9wzEeKtycVXPafXpUkePhMh4sffIMkhRDyedokG/QA==}
-    dependencies:
-      '@types/koa': 2.13.5
-    dev: true
-
   /@types/koa-session/5.10.6:
     resolution: {integrity: sha512-p4rgkeRmiJu8XGC3eH2duRCNgnLUl6sjadEXH/AsieH/9fqYfXSZoZNC9CAe+FQK+QmM76hVyvuJ5Jrl5xxNeA==}
     dependencies:
@@ -575,6 +576,12 @@ packages:
       '@types/keygrip': 1.0.2
       '@types/koa-compose': 3.2.5
       '@types/node': 18.11.12
+
+  /@types/koa__cors/3.3.0:
+    resolution: {integrity: sha512-FUN8YxcBakIs+walVe3+HcNP+Bxd0SB8BJHBWkglZ5C1XQWljlKcEFDG/dPiCIqwVCUbc5X0nYDlH62uEhdHMA==}
+    dependencies:
+      '@types/koa': 2.13.5
+    dev: true
 
   /@types/koa__router/12.0.0:
     resolution: {integrity: sha512-S6eHyZyoWCZLNHyy8j0sMW85cPrpByCbGGU2/BO4IzGiI87aHJ92lZh4E9xfsM9DcbCT469/OIqyC0sSJXSIBQ==}
@@ -1553,10 +1560,6 @@ packages:
     resolution: {integrity: sha512-8ODW8TrDuMYvXRwra/Kh7/rJo9BtOfPc6qO8eAfC80CnCvSjSl0bkRM24X6/XBBEyj0v1nRUQ1LyOy3dbqOWXw==}
     dev: false
 
-  /koa-cors/0.0.16:
-    resolution: {integrity: sha512-s15knPxe3AJBi2I/ZMPL0pSqU+PLYLO6k5tI0AqClkzavowvocPlSdFUwaHNqtjHMhsGmiq2tiX/25iILJx9YA==}
-    dev: false
-
   /koa-jwt/4.0.3:
     resolution: {integrity: sha512-NCdkEZ9cTNLdfxlwlJOFpKIjIZAXgo3zNZjvAVXRVyFkgGFxn7areoqmIfu/tqel4V7j5a7c6b0ago8IoZJUyg==}
     engines: {node: '>= 8'}
@@ -2450,6 +2453,11 @@ packages:
   /validator/13.7.0:
     resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==}
     engines: {node: '>= 0.10'}
+    dev: false
+
+  /vary/1.1.2:
+    resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
+    engines: {node: '>= 0.8'}
     dev: false
 
   /vite/3.2.5_@types+node@18.11.12:

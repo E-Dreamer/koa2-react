@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-12 14:49:39
- * @LastEditTime: 2022-12-13 09:47:46
+ * @LastEditTime: 2022-12-13 13:08:03
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -26,7 +26,5 @@ const addressModel = sequelize.define('address', {
     type: DataTypes.STRING
   }
 })
-addressModel.hasOne(userModel, {
-  foreignKey: 'user_id'
-})
+// addressModel.belongsTo(userModel) // 在address表中创建 'user_id' 外键
 export default addressModel

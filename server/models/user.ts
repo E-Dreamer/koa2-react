@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 15:27:27
- * @LastEditTime: 2022-12-13 09:51:34
+ * @LastEditTime: 2022-12-13 13:12:19
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -34,6 +34,8 @@ const userModel = sequelize.define('user', {
   deletedAt:'status',
   freezeTableName: true,
 })
-userModel.belongsTo(addressModel)
+// userModel.hasOne(addressModel, {
+//   foreignKey: 'user_id'
+// })
 export default userModel
 

@@ -1,13 +1,13 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-08 14:48:57
- * @LastEditTime: 2022-12-12 10:04:37
+ * @LastEditTime: 2022-12-13 13:13:00
  * @LastEditors: E-Dreamer
  * @Description: 
  */
 import Koa, { DefaultState, DefaultContext } from 'koa'
 import { jwtSecret, jwtWhiteList, port } from './config/index'
-import KoaCors from 'koa-cors'
+import KoaCors from '@koa/cors'
 import KoaBody from 'koa-body'
 import corsConfig from './middlewares/cors'
 import router from './router/index'
