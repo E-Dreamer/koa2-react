@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-12 14:49:39
- * @LastEditTime: 2022-12-13 13:08:03
+ * @LastEditTime: 2022-12-14 10:13:20
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -21,10 +21,17 @@ const addressModel = sequelize.define('address', {
   user_id: {
     type: Sequelize.INTEGER,
     allowNull: false,
+    // 定义user_id 为外键 关联userModel中的id
+    // references:{
+    //   model:userModel,
+    //   key:'id'
+    // }
   },
   address: {
     type: DataTypes.STRING
   }
 })
-// addressModel.belongsTo(userModel) // 在address表中创建 'user_id' 外键
+
+addressModel.sync();
+
 export default addressModel

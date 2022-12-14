@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 11:21:34
- * @LastEditTime: 2022-12-12 15:42:47
+ * @LastEditTime: 2022-12-14 10:22:37
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -16,16 +16,26 @@ const sequelize = new Sequelize(
     host: mysqlConf.mysqlIp,
     port: mysqlConf.mysqlPort,
     dialect: 'mysql',
+    //数据库全局配置
     define: {
+      // 是否为表添加 createdAt 和 updatedAt 字段
+      // createdAt 记录表的创建时间
+      // updatedAt 记录字段更新时间
       timestamps: false,
+      //是否冻结表名,最好设置为true，要不sequelize会自动给表名加上复数s造成查询数据失败。
+      //mongoose也有这样的问题...
+      // freezeTableName: true,
     },
     pool: {
       max: 5,
       min: 0,
       acquire: 30000,
       idle: 10000
-    }
+    },
+    // 时区
+    timezone: '+08:00'
   })
+//测试连接是否正常
 const concent = async () => {
   try {
     await sequelize.authenticate();

@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "models": "cross-env NODE_ENV=development ts-node-dev --respawn ./server/config/auto.ts",
     "back:dev": "cross-env NODE_ENV=development ts-node-dev --respawn ./server/index.ts",
     "back:prod": "cross-env NODE_ENV=production ts-node-dev --respawn ./server/index.ts"
   },
@@ -24,6 +25,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sequelize": "^6.26.0",
+    "sequelize-auto": "^0.8.8",
     "svg-captcha": "^1.4.0",
     "ts-node-dev": "^2.0.0",
     "xss": "^1.0.14"
@@ -40,6 +42,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "mysql": "^2.18.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

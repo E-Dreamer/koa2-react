@@ -1,11 +1,10 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 14:50:12
- * @LastEditTime: 2022-12-13 09:52:12
+ * @LastEditTime: 2022-12-14 10:23:12
  * @LastEditors: E-Dreamer
  * @Description: 
  */
-import userModel from "../models/user";
 import { request, summary, tags, security, body, responses } from "koa-swagger-decorator";
 import svgCaptcha from 'svg-captcha'
 import JwtAuth from '../middlewares/jwt/index'
@@ -13,7 +12,7 @@ import xss from "xss";
 import { decrypt, encrypt } from "../utils/bcrypt";
 import { Msg } from '../utils/index'
 import sequelize from "../config/sequelizeBase";
-import addressModel from "../models/address";
+import { addressModel,userModel } from "../models/index";
 const loginSehema = {
   username: { type: 'string', require: true },
   password: { type: ['string', 'number'], require: true },
@@ -137,7 +136,7 @@ export default class Auth {
   })
   static async ceshi(ctx: any) {
     try {
-      const res = await addressModel.findAll({ include: userModel })
+      const res = await addressModel.findAll({ include: [userModel] })
       ctx.status = 200;
       ctx.body = Msg.success('查询成功', res)
     } catch (err: any) {

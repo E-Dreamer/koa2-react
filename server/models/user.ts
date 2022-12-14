@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 15:27:27
- * @LastEditTime: 2022-12-13 13:12:19
+ * @LastEditTime: 2022-12-14 10:13:47
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -22,20 +22,20 @@ const userModel = sequelize.define('user', {
     // field:''
   },
   username: {
-    type:Sequelize.STRING,    
-    validate:{
-      is:/^\w_/g
+    type: Sequelize.STRING,
+    validate: {
+      is: /^\w_/g
     }
   },
   password: Sequelize.STRING
 }, {
   paranoid: true,
-  timestamps:true,
-  deletedAt:'status',
+  timestamps: true,
+  deletedAt: 'status',
   freezeTableName: true,
 })
-// userModel.hasOne(addressModel, {
-//   foreignKey: 'user_id'
-// })
+
+userModel.sync()
+
 export default userModel
 

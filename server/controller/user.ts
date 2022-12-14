@@ -1,12 +1,12 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 09:33:51
- * @LastEditTime: 2022-12-12 15:53:29
+ * @LastEditTime: 2022-12-14 10:15:54
  * @LastEditors: E-Dreamer
  * @Description: 
  */
 import { Msg } from './../utils/index';
-import userModel from '../models/user'
+import { userModel } from "../models/index";
 import { request, summary, query, security, tags, responses } from 'koa-swagger-decorator'
 export default class UserController {
   @request('get', '/users')
