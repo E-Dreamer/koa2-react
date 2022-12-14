@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 14:50:12
- * @LastEditTime: 2022-12-14 14:16:34
+ * @LastEditTime: 2022-12-14 16:02:56
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -12,7 +12,7 @@ import xss from "xss";
 import { decrypt, encrypt } from "../utils/bcrypt";
 import { Msg } from '../utils/index'
 import sequelize from "../config/sequelizeBase";
-import { addressModel, userModel } from "../models/index";
+import { addressModel, scoreModel, userModel } from "../models/index";
 const loginSehema = {
   username: { type: 'string', require: true },
   password: { type: ['string', 'number'], require: true },
@@ -136,15 +136,42 @@ export default class Auth {
   })
   static async ceshi(ctx: any) {
     try {
+      // user表和address表
+      // const res = await userModel.findAll({
+      //   include: {
+      //     model: addressModel,
+      //     as: 'address_content',
+      //     attributes: ['address','id']
+      //   }
+      // })
+      // user表、score表、address表
       const res = await userModel.findAll({
-        include: {
-          model: addressModel,
-          as: 'address_content',
-          // attributes: [['address', 'content']]
-        }
+        include:[
+          {
+            model:addressModel,
+            as:'address_content',
+            attributes: ['address','id']
+          },
+          {
+            model:scoreModel,
+            as:'score_content',
+            attributes:['c_id','s_score']
+          }
+        ]
       })
+      // //处理数据 将address_content里面的数据 放在外层 
+      // const data :any[] = []
+      // res.map(i=>{
+      //   let obj = {
+      //     ...i.dataValues,
+      //     address:i.dataValues.address_content?.address || null
+      //   }
+      //   delete obj['address_content']
+      //   data.push(obj)
+      // })
+      
       ctx.status = 200;
-      ctx.body = Msg.success('查询成功', res)
+      ctx.body = Msg.success('查询成功',res )
     } catch (err: any) {
       ctx.status = 200;
       ctx.body = Msg.error(err.message || '查询失败')
