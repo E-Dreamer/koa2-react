@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 14:50:12
- * @LastEditTime: 2022-12-14 10:23:12
+ * @LastEditTime: 2022-12-14 13:49:35
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -12,7 +12,7 @@ import xss from "xss";
 import { decrypt, encrypt } from "../utils/bcrypt";
 import { Msg } from '../utils/index'
 import sequelize from "../config/sequelizeBase";
-import { addressModel,userModel } from "../models/index";
+import { addressModel, userModel } from "../models/index";
 const loginSehema = {
   username: { type: 'string', require: true },
   password: { type: ['string', 'number'], require: true },
@@ -136,7 +136,11 @@ export default class Auth {
   })
   static async ceshi(ctx: any) {
     try {
-      const res = await addressModel.findAll({ include: [userModel] })
+      const res = await userModel.findAll({ include: [{
+        model:addressModel,
+        // as:'address_content'
+        // attributes:[['address','content']]
+      }] })
       ctx.status = 200;
       ctx.body = Msg.success('查询成功', res)
     } catch (err: any) {

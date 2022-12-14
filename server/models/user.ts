@@ -1,13 +1,12 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 15:27:27
- * @LastEditTime: 2022-12-14 10:13:47
+ * @LastEditTime: 2022-12-14 13:14:48
  * @LastEditors: E-Dreamer
  * @Description: 
  */
 import sequelize from "../config/sequelizeBase";
 import Sequelize from "sequelize";
-import addressModel from "./address";
 const userModel = sequelize.define('user', {
   id: {
     //数据类型 查看文档 https://www.sequelize.cn/core-concepts/model-basics#%E4%BD%BF%E7%94%A8-sequelizedefine
@@ -30,9 +29,7 @@ const userModel = sequelize.define('user', {
   password: Sequelize.STRING
 }, {
   paranoid: true,
-  timestamps: true,
-  deletedAt: 'status',
-  freezeTableName: true,
+  deletedAt: 'status'
 })
 
 userModel.sync()

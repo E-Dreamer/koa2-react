@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 11:21:34
- * @LastEditTime: 2022-12-14 10:22:37
+ * @LastEditTime: 2022-12-14 13:25:37
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -23,8 +23,8 @@ const sequelize = new Sequelize(
       // updatedAt 记录字段更新时间
       timestamps: false,
       //是否冻结表名,最好设置为true，要不sequelize会自动给表名加上复数s造成查询数据失败。
-      //mongoose也有这样的问题...
-      // freezeTableName: true,
+      //推断表名称等于模型名称,而无需进行任何修改
+      freezeTableName: true,
     },
     pool: {
       max: 5,

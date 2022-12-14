@@ -1,13 +1,12 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-12 14:49:39
- * @LastEditTime: 2022-12-14 10:13:20
+ * @LastEditTime: 2022-12-14 13:14:28
  * @LastEditors: E-Dreamer
  * @Description: 
  */
 import sequelize from "../config/sequelizeBase";
 import Sequelize, { DataTypes } from 'sequelize'
-import userModel from "./user";
 const addressModel = sequelize.define('address', {
   id: {
     type: Sequelize.INTEGER,
@@ -18,9 +17,10 @@ const addressModel = sequelize.define('address', {
     //自增
     autoIncrement: true,
   },
-  user_id: {
+  userId: {
     type: Sequelize.INTEGER,
     allowNull: false,
+    field:'user_id'
     // 定义user_id 为外键 关联userModel中的id
     // references:{
     //   model:userModel,
@@ -30,6 +30,9 @@ const addressModel = sequelize.define('address', {
   address: {
     type: DataTypes.STRING
   }
+},{
+  paranoid:true,
+  deletedAt:'status'
 })
 
 addressModel.sync();
