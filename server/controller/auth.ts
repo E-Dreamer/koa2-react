@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 14:50:12
- * @LastEditTime: 2022-12-14 13:49:35
+ * @LastEditTime: 2022-12-14 14:16:34
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -136,11 +136,13 @@ export default class Auth {
   })
   static async ceshi(ctx: any) {
     try {
-      const res = await userModel.findAll({ include: [{
-        model:addressModel,
-        // as:'address_content'
-        // attributes:[['address','content']]
-      }] })
+      const res = await userModel.findAll({
+        include: {
+          model: addressModel,
+          as: 'address_content',
+          // attributes: [['address', 'content']]
+        }
+      })
       ctx.status = 200;
       ctx.body = Msg.success('查询成功', res)
     } catch (err: any) {
