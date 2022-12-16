@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-12 14:49:39
- * @LastEditTime: 2022-12-14 13:14:28
+ * @LastEditTime: 2022-12-15 15:37:25
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -35,6 +35,6 @@ const addressModel = sequelize.define('address', {
   deletedAt:'status'
 })
 
-addressModel.sync();
+// addressModel.sync();
 
 export default addressModel

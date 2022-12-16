@@ -2,7 +2,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-08 16:07:37
- * @LastEditTime: 2022-12-13 09:45:41
+ * @LastEditTime: 2022-12-14 16:27:07
  * @LastEditors: E-Dreamer
  * @Description: 项目基本配置
  */
@@ -23,6 +23,7 @@ const config = {
     /^\/deleteUser/,
     /^\/ceshiQuery/,
     /^\/ceshi/,
+    /^\/upload/
   ],
   // 日志保存的位置
   LogPath: path.resolve(__dirname, '../log/koa.log')

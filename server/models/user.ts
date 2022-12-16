@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 15:27:27
- * @LastEditTime: 2022-12-14 13:14:48
+ * @LastEditTime: 2022-12-15 15:37:33
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -32,7 +32,7 @@ const userModel = sequelize.define('user', {
   deletedAt: 'status'
 })
 
-userModel.sync()
+// userModel.sync()
 
 export default userModel
 
