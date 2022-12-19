@@ -2,16 +2,16 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-09 09:33:51
- * @LastEditTime: 2022-12-15 15:44:52
+ * @LastEditTime: 2022-12-19 13:42:36
  * @LastEditors: E-Dreamer
  * @Description: 
  */
-
+import fs from 'fs'
 import { Msg } from './../utils/index';
 import { userModel } from "../models/index";
 import { request, summary, query, security, tags, responses, formData } from 'koa-swagger-decorator'
+import UploadController from '../utils/upload';
 import path from 'path';
-import { upload } from '../utils/index'
 export default class UserController {
   @request('get', '/users')
   @summary('获取用户信息')
@@ -68,30 +68,61 @@ export default class UserController {
     400: { description: 'error' }
   })
   static async upload(ctx: any) {
-    const file = ctx.request.files.file;
-    if (!file) {
-      ctx.status = 500;
-      ctx.body = Msg.error('上传文件为空，请重新操作')
-      return
-    }
-    // console.log('FILE',file);
-    // server/uploads
-    const dir = path.resolve(__dirname, '../uploads')
-    // 单文件上传
-    if (!file.length) {
-      upload(dir, file.filepath, file.newFilename)
-      ctx.status = 200;
-      ctx.body = Msg.success('上传成功', `${ctx.origin}/${file.newFilename}`)
-    } else {
-      let result = []
-      //多文件上传
-      for (let key in file) {
-        upload(dir, file[key].filepath, file[key].newFilename)
-        result.push(`${ctx.origin}/${file[key].newFilename}`)
-      }
-      ctx.status = 200;
-      ctx.body = Msg.success('上传成功', result)
-    }
+    UploadController.uploadfiles(ctx)
+  }
+  @request('post', '/uploadfilebig')
+  @summary('上传大文件接口 分片')
+  @tags(['用户'])
+  @security([{ api_key: [] }])
+  @formData({ file: { type: 'file' } })
+  @responses({
+    200: { description: 'success' },
+    400: { description: 'error' }
+  })
+  static async uploadfilebig(ctx: any) {
+    UploadController.uploadfilebig(ctx)
+  }
+  @request('post', '/uploadfilebig-merge')
+  @summary('上传大文件接口 分片')
+  @tags(['用户'])
+  @security([{ api_key: [] }])
+  @formData({ file: { type: 'file' } })
+  @responses({
+    200: { description: 'success' },
+    400: { description: 'error' }
+  })
+  static async uploadfilebigMerge(ctx: any) {
+    UploadController.uploadfilebigMerge(ctx)
+  }
+  @request('post', '/uploadfilebig-inspect')
+  @summary('检查大文件')
+  @tags(['用户'])
+  @security([{ api_key: [] }])
+  @formData({ file: { type: 'file' } })
+  @responses({
+    200: { description: 'success' },
+    400: { description: 'error' }
+  })
+  static async uploadfilebigInspect(ctx: any) {
+    UploadController.uploadfilebigInspect(ctx)
+  }
 
+  @request('post', '/download')
+  @summary('下载接口')
+  @tags(['用户'])
+  @security([{ api_key: [] }])
+  @responses({
+    200: { description: 'success' },
+    400: { description: 'error' }
+  })
+  static async download(ctx: any) {
+    const fileArr = ctx.request.body;
+    const filePath = fileArr[0]
+    const filename = filePath.substring(filePath.lastIndexOf('/'), filePath.length)
+    var stats = fs.statSync(path.join(__dirname, `../uploads/${filePath}`));
+    ctx.set('Content-Type', 'application/octet-stream');
+    ctx.set('Content-Disposition', 'attachment; filename=' + filename);
+    ctx.set('Content-Length', stats.size);
+    ctx.body = fs.createReadStream(path.join(__dirname, `../uploads/${filePath}`))
   }
 }

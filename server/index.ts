@@ -1,19 +1,18 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-08 14:48:57
- * @LastEditTime: 2022-12-15 16:28:43
+ * @LastEditTime: 2022-12-19 13:24:46
  * @LastEditors: E-Dreamer
  * @Description: 
  */
 import Koa, { DefaultState, DefaultContext } from 'koa'
-import { jwtSecret, jwtWhiteList, port } from './config/index'
+import { jwtSecret, jwtWhiteList, port, uploadPath } from './config/index'
 import KoaCors from '@koa/cors'
 import KoaBody from 'koa-body'
 import corsConfig from './middlewares/cors'
 import router from './router/index'
 import jwt from 'koa-jwt'
 import './config/sequelizeBase'
-import path from 'path'
 import Session from 'koa-session'
 import koaStatic from 'koa-static'
 import { errorHandler, responseHandler } from './middlewares/response'
@@ -32,7 +31,7 @@ const CONFIG = {
   // store: sessionStore,
 }
 app.use(Session(CONFIG, app))
-app.use(koaStatic(path.join(__dirname, './uploads')))
+app.use(koaStatic(uploadPath))
 //解决跨域
 app.use(KoaCors(corsConfig))
 app.use(KoaBody({
@@ -40,7 +39,7 @@ app.use(KoaBody({
   multipart: true,
   formidable: {
     // 上传目录
-    uploadDir: path.join(__dirname, './uploads'),
+    uploadDir: uploadPath,
     // 保留文件扩展名
     keepExtensions: true,
     //上传最大限制
@@ -50,8 +49,8 @@ app.use(KoaBody({
       console.log('file', file.toJSON());
     }
   },
-  onError(err) {
-    console.log('error', err);
+  onError(err, ctx) {
+    ctx.body = { code: -1, msg: err || '上传失败' }
   }
 }))
 // 对于任何请求，app将调用该异步函数处理请求：
