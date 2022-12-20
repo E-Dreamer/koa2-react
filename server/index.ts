@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-08 14:48:57
- * @LastEditTime: 2022-12-19 13:24:46
+ * @LastEditTime: 2022-12-20 09:12:57
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -18,6 +18,7 @@ import koaStatic from 'koa-static'
 import { errorHandler, responseHandler } from './middlewares/response'
 import { loggerMiddleware } from './middlewares/logger'
 const app: Koa<DefaultState, DefaultContext> = new Koa()
+import { checkDirExist } from './utils/upload'
 
 const CONFIG = {
   key: 'sessionId',
@@ -47,6 +48,7 @@ app.use(KoaBody({
     onFileBegin(name, file) {
       console.log('name', name);
       console.log('file', file.toJSON());
+      checkDirExist(uploadPath)
     }
   },
   onError(err, ctx) {
