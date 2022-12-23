@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-19 14:56:55
- * @LastEditTime: 2022-12-19 15:42:07
+ * @LastEditTime: 2022-12-20 11:27:41
  * @LastEditors: E-Dreamer
  * @Description:
  */
@@ -73,11 +73,12 @@ function Ceshi() {
           return new Promise((resolve) => {
             axios.post('/api/uploadfilebig',formData).then(res=>{
               setPercent(Number((start / size) * 100).toFixed(2))
-              resolve(res)
+              resolve(res.data)
             })
           })
         }
         const { data }:any = await uploadfilebig()
+        console.log('filebig ', data);
         resultFileDir = data
         // console.log(data)
         index += 1
@@ -93,6 +94,7 @@ function Ceshi() {
             }
           )
             .then((data) => {
+              console.log(data.data);
               resolve(data.data)
             })
             .catch((err) => {
