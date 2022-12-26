@@ -1,13 +1,13 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-19 14:56:55
- * @LastEditTime: 2022-12-20 11:27:41
+ * @LastEditTime: 2022-12-26 09:41:20
  * @LastEditors: E-Dreamer
  * @Description:
  */
 import axios from 'axios'
 import { useState } from 'react'
-import './index.css'
+import './index.scss'
 function Ceshi() {
   const [imgArr, setImgArr] = useState([])
 
@@ -71,13 +71,13 @@ function Ceshi() {
 
         function uploadfilebig() {
           return new Promise((resolve) => {
-            axios.post('/api/uploadfilebig',formData).then(res=>{
+            axios.post('/api/uploadfilebig', formData).then(res => {
               setPercent(Number((start / size) * 100).toFixed(2))
               resolve(res.data)
             })
           })
         }
-        const { data }:any = await uploadfilebig()
+        const { data }: any = await uploadfilebig()
         console.log('filebig ', data);
         resultFileDir = data
         // console.log(data)
@@ -120,14 +120,14 @@ function Ceshi() {
       }
       let extList = name.split('.')
       let ext = extList[extList.length - 1]
-      const {data}:any = await uploadfilebigMerge(resultFileDir, ext)
+      const { data }: any = await uploadfilebigMerge(resultFileDir, ext)
       console.log('文件路径：', data)
     }
   }
   return (
     <>
       <div>
-        <div className="box">
+        <div className='box'>
           <p>+</p>
           <input
             type="file"

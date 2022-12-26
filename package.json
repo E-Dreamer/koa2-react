@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "prepare": "husky install",
+    "fix": "eslint --fix --ext .js,.ts,.tsx ./src",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -26,6 +28,7 @@
     "mysql2": "^2.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.1",
     "sequelize": "^6.26.0",
     "sequelize-auto": "^0.8.8",
     "svg-captcha": "^1.4.0",
@@ -33,6 +36,7 @@
     "xss": "^1.0.14"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^17.3.0",
     "@types/bcryptjs": "^2.4.2",
     "@types/jsonwebtoken": "^8.5.9",
     "@types/koa": "^2.13.5",
@@ -44,9 +48,28 @@
     "@types/node": "^18.11.12",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@vitejs/plugin-react": "^2.2.0",
+    "commitlint": "^17.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.30.0",
+    "eslint-config-standard-with-typescript": "^24.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.11",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
     "mysql": "^2.18.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.3"
+    "sass": "^1.57.1",
+    "typescript": "^4.9.4",
+    "vite": "^3.2.3",
+    "vite-plugin-eslint": "^1.8.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0 --fix ",
+      "prettier --write"
+    ]
   }
 }
