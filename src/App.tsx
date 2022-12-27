@@ -1,5 +1,4 @@
-import Ceshi from '@/component/ceshi/index'
-import { BrowserRouter, HashRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import AuthRouter from './router/authRouter'
 import Router from './router/index'
 function App() {

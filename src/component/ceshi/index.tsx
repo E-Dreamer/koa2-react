@@ -1,7 +1,8 @@
+/* eslint-disable no-inner-declarations */
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-19 14:56:55
- * @LastEditTime: 2022-12-26 09:41:20
+ * @LastEditTime: 2022-12-26 15:15:33
  * @LastEditors: E-Dreamer
  * @Description:
  */
@@ -39,7 +40,8 @@ function Ceshi() {
     console.log('target:', target)
     if (target.files) {
       const file = target.files[0]
-      const { name, size, type } = file
+      // type
+      const { name, size } = file
       let start = 0
       let index = 0
       let resultFileDir = '' // 后台返回的路径

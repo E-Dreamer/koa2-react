@@ -1,7 +1,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-26 11:34:50
- * @LastEditTime: 2022-12-26 13:36:04
+ * @LastEditTime: 2022-12-26 15:16:30
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -17,6 +17,7 @@ const AuthRouter = (props: any) => {
   if (!route.meta?.requiresAuth) return props.children;
 
   const staticRouter = ['/', "/404",];
+  console.log('staticRouter: ', staticRouter);
 
   return props.children;
 }

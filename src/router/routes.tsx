@@ -2,7 +2,7 @@
 /*
  * @Author: E-Dreamer
  * @Date: 2022-12-26 09:55:08
- * @LastEditTime: 2022-12-26 13:17:51
+ * @LastEditTime: 2022-12-26 15:27:19
  * @LastEditors: E-Dreamer
  * @Description: 
  */
@@ -38,7 +38,7 @@ const routes: RoutesArr = [
       key: 'home'
     },
     path: '/',
-    element: <Home/>,
+    element: <Home />,
   },
   {
     meta: {
@@ -56,5 +56,4 @@ const routes: RoutesArr = [
 ]
 
 export default routes;
-
 

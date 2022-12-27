@@ -4,6 +4,7 @@ import viteEslint from 'vite-plugin-eslint'
 import path from 'path'
 // https://vitejs.dev/config/
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default defineConfig(({ command, mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) }
   return {
